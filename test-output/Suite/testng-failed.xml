@@ -5,7 +5,7 @@
     <classes>
       <class name="Rainbowtests.LoginTest">
         <methods>
-          <include name="logintest"/>
+          <include name="User_Cant_login_with_Invalid_pass"/>
           <include name="launchBrowser"/>
         </methods>
       </class> <!-- Rainbowtests.LoginTest -->

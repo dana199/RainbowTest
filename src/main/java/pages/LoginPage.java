@@ -14,7 +14,7 @@ public class LoginPage extends BasePage{
     	clickelement(Locators.Continue_BTN);
     	setFieldtext(Locators.PASSWORD_FIELD,loginpassword);
     	clickelement(Locators.CONNECT_BTN);
-    	clickelement(Locators.Close_BTN);
-    	AvatarAppearance();
+    	//clickelement(Locators.Close_BTN);
+    	//AvatarAppearance();
     }
 }

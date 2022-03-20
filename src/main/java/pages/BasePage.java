@@ -17,11 +17,11 @@ public class BasePage {
 	}
 	
 	public void clickelement(By locator) {
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		driver.findElement(locator).click();	
 	}
 	public void setFieldtext(By locator, String text) {
-		//driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		WebElement element = driver.findElement(locator);
 		element.clear();
 		element.sendKeys(text);
@@ -36,5 +36,11 @@ public class BasePage {
 	}
 	public boolean AvatarAppearance() {
 		return (getelement(Locators.AVATAR_USR));
+	}
+	public boolean ValidateAccountError() {
+		return (getelement(Locators.Unkown_error_please_contact_your_adminstrator));		
+	}
+	public boolean ValidatepasswordError() {
+		return (getelement(Locators.Invalid_username_or_password));		
 	}
 }

@@ -1,6 +1,8 @@
 package Rainbowtests;
 
 import java.io.IOException;
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -28,12 +30,14 @@ public class BaseTest {
 	    	  System.setProperty("webdriver.chrome.driver", driverPath0);
 	    	  driver = new ChromeDriver();
 	    	  driver.manage().window().maximize();  // maximize the browser window
-	    	  driver.get(baseUrl); //open the application url
+	    	  //driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);// Wait For Page To Load
+	    	  driver.get(baseUrl); //open the application url	    	   
 	    	  break;
 	      case "firefox":
 	    	  System.setProperty("webdriver.gecko.driver", driverPath);
 	    	  driver = new FirefoxDriver();
 	    	  driver.manage().window().maximize();  // maximize the browser window
+	    	  //driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);// Wait For Page To Load
 	    	  driver.get(baseUrl); //open the application url
 	    	  break;
 	    	  }
